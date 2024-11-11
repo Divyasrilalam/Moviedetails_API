@@ -137,9 +137,8 @@ Description: Fetches the movie details from OMDB API based on the title.
 - **Related Movies:** Display related movies based on the movie genre.
 
 ## Authors
-
-- **Hafeeza Bhanu Mohammad**
 - **Lalam Divya Sri**
+- **Hafeeza Bhanu Mohammad**
 
 ## Acknowledgements
 
