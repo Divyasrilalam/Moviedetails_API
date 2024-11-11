@@ -92,9 +92,44 @@ Follow the steps below to get the project running on your local machine.
 - Add the movie to your watchlist by clicking the Add to Watchlist button.
 - You can view and manage your watchlist on the homepage.
 
-## API Usage
+# API Setup
+You will need an OMDB API key to fetch movie details. You can obtain it from [OMDB API](http://www.omdbapi.com/apikey.aspx).
 
-The app interacts with the OMDb API to fetch movie data. You will need to use your own OMDb API key in `app.py`.
+# Run Locally with Docker
+
+1. Clone the repository:
+   git clone https://github.com/Divyasri62/Moviedetails_API.git
+
+2. Navigate to the project directory:
+   cd movieAPI
+
+3. Build the Docker image:
+   docker build -t divya715/moviedetails_flaskapp .
+
+4. Run the Docker container:
+   docker run -d -p 5000:5000 divya715/moviedetails_flaskapp
+
+5. Log in to Docker Hub:
+   docker login
+
+6. Push the Docker image to Docker Hub:
+   docker push divya715/moviedetails_flaskapp
+
+Access the app at http://localhost:5000
+
+
+API Endpoints
+Home Page:
+
+Method: GET
+URL: /
+Description: Displays a form to input the movie title.
+Get Movie Details:
+
+Method: POST
+URL: /get_movie
+Parameters: title (string) - Movie title entered by the user.
+Description: Fetches the movie details from OMDB API based on the title.
 
 ## Features to Implement
 
